@@ -14,8 +14,7 @@ const loadMovies =async(query='')=>{
   loading.value=false
 }
 
-onMounted(()=>
-  loadMovies())
+onMounted(()=>loadMovies())
 
 
 
@@ -38,5 +37,37 @@ const handleSearch=(query:string)=>{
 </template>
 
 <style scoped>
+
+  .movie-list{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 90%;
+    margin: auto;
+  }
+  .movies-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+  }
+  
+   @media (min-width:650px) {
+    .movies-grid{
+      grid-template-columns: repeat(2,1fr);
+    }
+    
+  }
+  @media (min-width:970px) {
+    .movies-grid{
+      grid-template-columns: repeat(3,1fr);
+    }
+    
+  }
+  @media (min-width:1300px) {
+    .movies-grid{
+      grid-template-columns: repeat(4,1fr);
+    }
+    
+  }
 
 </style>

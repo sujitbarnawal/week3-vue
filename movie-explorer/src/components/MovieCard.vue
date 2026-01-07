@@ -19,16 +19,38 @@ import type {Movie} from "../types/movieType.ts"
     <div @click="navigate" class="movie-card">
         <img :src="'https://image.tmdb.org/t/p/w500'+movie.poster_path" :alt="movie.title" class="poster-image"/>
         <h3>{{ movie.title}}</h3>
-        <p>{{ movie.release_date }}</p>
+        <p>Released:{{ movie.release_date }}</p>
 
     </div>
   
 </template>
 
 <style scoped>
-    .poster-image{
-        height: 200px;
-        width: 200px;
-    }
+    .poster-image {
+    width: 300px;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 10px 10px 0 0; 
+}
+
+.movie-card {
+    border: 1px solid grey;
+    margin-bottom: 20px;
+    margin: auto;
+    border-radius: 10px;
+    width: 300px;
+    overflow: hidden;
+    cursor:pointer;
+}
+
+h3{
+    padding-left:10px ;
+    padding-top: 10px;
+}
+
+p{
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
 
 </style>

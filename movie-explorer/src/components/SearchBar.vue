@@ -22,5 +22,34 @@ import { ref } from 'vue';
 </template>
 
 <style scoped>
+    .search-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    padding: 13px;
+    outline: none;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid grey;
+    border-right: none; 
+    min-width: 250px;
+    width: 25%;
+    font-size: 18px;
+}
+
+button {
+    padding: 13px;
+    outline: none;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid grey;
+    border-left: none; /* Move this AFTER the border declaration */
+    background: crimson;
+    color: white;
+    min-width: 80px;
+    width: 5%;
+    cursor: pointer;
+}
 
 </style>
