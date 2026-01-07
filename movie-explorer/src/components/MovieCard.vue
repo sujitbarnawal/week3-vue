@@ -37,6 +37,7 @@ import type {Movie} from "../types/movieType.ts"
     border: 1px solid grey;
     margin-bottom: 20px;
     margin: auto;
+    margin-bottom: 10px;
     border-radius: 10px;
     width: 300px;
     overflow: hidden;
