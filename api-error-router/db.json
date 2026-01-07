@@ -1,0 +1,29 @@
+{
+  "expenses": [
+    {
+      "title": "Room Rent",
+      "amount": 6500,
+      "id": "1"
+    },
+    {
+      "id": "1767703277503",
+      "title": "Futsal",
+      "amount": 200
+    },
+    {
+      "id": "1767703360321",
+      "title": "Clothes",
+      "amount": 400
+    },
+    {
+      "id": "1767703607828",
+      "title": "Groceries",
+      "amount": 1500
+    },
+    {
+      "id": "1767704225364",
+      "title": "Shoes",
+      "amount": 1600
+    }
+  ]
+}

@@ -18,6 +18,7 @@ import { ref } from 'vue';
             error.value=null
             try {
                 await api.post('/expenses',{
+                    id:(Date.now()).toString(),
                     title:title.value,
                     amount:amount.value
                 })

@@ -62,6 +62,8 @@ const updateExpense = async (): Promise<void> => {
     <p v-if="error">{{ error }}</p>
     <div v-if="!loading && !error && expense">
         <h1>Update Expense</h1>
+        <p>Expense Title: {{ expense.title }}</p>
+        <p>Amount:Rs.{{expense.amount  }}</p>
         <input type="text"  v-model="title">
         <input type="number"  v-model.number="amount">
         <button @click="updateExpense" :disabled="updateLoading">{{ updateLoading ? "Updating..." : "Update" }}</button>

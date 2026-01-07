@@ -1,45 +1,29 @@
 <script setup lang="ts">
-import api from '@/api/axios';
-import type { Expense } from '@/Types/ExpenseType';
+import api from '@/api/axios'
+import type { Expense } from '@/Types/ExpenseType'
+import { onMounted, ref } from 'vue'
 
-
-
-import { onMounted, ref, watch } from 'vue';
-
-
-
-const expenses = ref<Expense[]>(JSON.parse(localStorage.getItem('EXPENSES') || '[]'))
+const expenses = ref<Expense[]>([])
 const loading = ref(false)
 const error = ref<string | null>(null)
 
-watch(expenses, (newExpenses) => {
-    localStorage.setItem('EXPENSES', JSON.stringify(newExpenses))
-
-}, { deep: true })
-
 const fetchExpenses = async (): Promise<void> => {
-    loading.value = true
-    error.value = null
-    try {
-        const response = await api.get('/expenses')
-        expenses.value = response.data.map((item: any) => ({
-            id: item.id,
-            title: item.title,
-            amount: item.amount,
-        }))
+  loading.value = true
+  error.value = null
 
-    } catch (error: any) {
-        error.value = error.response?.data?.message || "Failed to load expenses"
-
-
-    } finally {
-        loading.value = false
-    }
+  try {
+    const response = await api.get<Expense[]>('/expenses')
+    expenses.value = response.data
+  } catch (err: any) {
+    error.value = 'Failed to load expenses'
+  } finally {
+    loading.value = false
+  }
 }
 
 onMounted(fetchExpenses)
-
 </script>
+
 
 <template>
 
