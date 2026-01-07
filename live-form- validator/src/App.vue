@@ -19,7 +19,6 @@ import FormContainer from './components/FormContainer.vue';
 
   .app{
     background:white;
-    color:blue;
     padding: 20px;
     border-radius: 10px;
     min-width: 350px;
