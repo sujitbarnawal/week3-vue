@@ -3,6 +3,7 @@ import { ref, onMounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { fetchMovieById} from '../api/movieApi'
 import type { Movie } from '@/types/movieType'
+import PageNotFound from './PageNotFound.vue'
 
 
 const route = useRoute()
@@ -44,7 +45,8 @@ onMounted(async () => {
     <p class="date">Release: {{ movie.release_date }}</p>
     <button @click="toggleFavourites">{{isFavourite?"Remove from favourites":"Add to favourites"}}</button>
   </div>
-  <div class="style-div" v-else>Movie not found(Invalid Id)</div>
+  <!-- <div class="style-div" v-else>Movie not found(Invalid Id)</div> -->
+   <PageNotFound v-else/>
 </template>
 
 
