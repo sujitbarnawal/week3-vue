@@ -25,6 +25,11 @@ import { useRouter } from 'vue-router';
     background-color: white;
 }
 
+img{
+   width: 300px;
+   height: 300px;
+}
+
 button {
     padding: 20px;
     border-radius: 10px;
@@ -36,4 +41,5 @@ button {
     cursor: pointer;
 
 }
+
 </style>
