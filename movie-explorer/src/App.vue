@@ -7,7 +7,7 @@ import Navbar from './components/Navbar.vue';
 <template>
     <div>
         <Navbar />
-        <Transition name="fade=slide" mode="out-in" appear>
+        <Transition name="fade-slide" mode="out-in" appear>
             <router-view />
 
         </Transition>
