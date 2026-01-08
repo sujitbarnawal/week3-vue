@@ -4,9 +4,13 @@ import type {Movie} from "../types/movieType.ts"
 import { onMounted, ref } from 'vue';
 import { fetchMovies } from '@/api/movieApi.ts';
 import MovieCard from '@/components/MovieCard.vue';
+import { useRoute, useRouter } from 'vue-router';
 
 const movies = ref<Movie[]>()
 const loading = ref(false)
+
+const route=useRoute()
+const router = useRouter()
 
 const loadMovies =async(query='')=>{
   loading.value=true
@@ -14,11 +18,17 @@ const loadMovies =async(query='')=>{
   loading.value=false
 }
 
-onMounted(()=>loadMovies())
+onMounted(()=>{
+  const query =route.query.query as string || ""
+  loadMovies(query)
+})
 
 
 
 const handleSearch=(query:string)=>{
+  router.push({
+    query:{query:query || undefined}
+  })
   loadMovies(query)  
 }
 
