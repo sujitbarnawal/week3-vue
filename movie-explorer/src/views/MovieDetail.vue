@@ -36,7 +36,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div v-if="loading">Loading...</div>
+  <div class="style-div" v-if="loading">Loading...</div>
   <div class="movie-detail" v-else-if="movie">
     <h1>{{ movie.title }}</h1>
     <img :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path" :alt="movie.title" />
@@ -44,7 +44,7 @@ onMounted(async () => {
     <p class="date">Release: {{ movie.release_date }}</p>
     <button @click="toggleFavourites">{{isFavourite?"Remove from favourites":"Add to favourites"}}</button>
   </div>
-  <div v-else>Movie not found</div>
+  <div class="style-div" v-else>Movie not found(Invalid Id)</div>
 </template>
 
 
@@ -89,6 +89,12 @@ onMounted(async () => {
     font-size:18px;
     border-radius: 10px;
     cursor: pointer;
+  }
+
+  .style-div{
+    width:90%;
+    margin: auto;
+    font-size: 40px;
   }
 
   @media (min-width:1000px) {

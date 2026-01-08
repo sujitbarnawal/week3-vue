@@ -5,6 +5,7 @@ const Home = ()=>import('../views/Home.vue')
 const MovieList=()=>import('../views/MovieList.vue')
 const MovieDetail=()=>import('../views/MovieDetail.vue')
 const Favourites=()=>import('../views/Favourites.vue')
+const PageNotFound=()=>import('../views/PageNotFound.vue')
 
 const routes=[
     {
@@ -24,6 +25,10 @@ const routes=[
         path:'/movies/favourites',
         name:"Favourites",
         component:Favourites
+    },{
+        path:'/:pathMatch(.*)*',
+        name:"PageNotFound",
+        component:PageNotFound
     }
 
 ]
