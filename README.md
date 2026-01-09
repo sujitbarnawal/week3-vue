@@ -7,35 +7,30 @@ A collection of Vue.js practice projects demonstrating various concepts and feat
 This repository includes the following Vue.js applications:
 
 ### 1. **Todo Application** 
-[Live Demo](https://week3-vue.v6rcel.app)
 - Complete task management system
 - Add and delete todos
 - Mark tasks as complete/incomplete
 - Local state management
 
 ### 2. **Shopping Cart**
-[Live Demo](https://week3-vue-bduz.vercel.app/)
 - Product listing and management
 - Add/remove items from cart
 - Cart total calculations
 - CRUD operations with JSON Server
 
 ### 3. **Live Form Validator**
-[Live Demo](https://week3-vue-x4bb.vercel.app/)
 - Real-time form validation
 - Input field validation rules
 - Custom error messages
 - Name and text color validation
 
 ### 4. **Expense Calculator**
-[Live Demo](https://week3-vue-q4ax.vercel.app/)
 - Track income and expenses
 - Calculate balance
 - Expense categorization
 - Financial summary display
 
 ### 5. **Movie Explorer**
-[Live Demo](https://movie-explorer-lyart-two.vercel.app/)
 - Search movies using query parameters
 - Movie listing and details
 - Persistent search functionality
